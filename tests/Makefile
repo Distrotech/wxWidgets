@@ -15,14 +15,14 @@ EXEEXT =
 WINDRES = 
 SETFILE = 
 ICC_PCH_USE_SWITCH = 
-BK_DEPS = /usr/src/wxWidgets/wxWidgets/bk-deps
-BK_MAKE_PCH = /usr/src/wxWidgets/wxWidgets/bk-make-pch
+BK_DEPS = /usr/src/wxWidgets/bk-deps
+BK_MAKE_PCH = /usr/src/wxWidgets/bk-make-pch
 srcdir = .
 top_srcdir = ..
 LIBS = -lz -ldl -lm
 CXX = g++
-CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
-CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-2.9 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
+CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
+CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-3.0 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
 LDFLAGS = -pthread   -L/usr/X11R7/lib  
 WX_LIB_FLAVOUR = 
 CPPUNIT_CFLAGS = 
@@ -30,23 +30,23 @@ CPPUNIT_LIBS = -lcppunit -ldl
 TOOLKIT = GTK
 TOOLKIT_LOWERCASE = gtk
 TOOLKIT_VERSION = 2
-TOOLCHAIN_FULLNAME = gtk2-unicode-2.9
+TOOLCHAIN_FULLNAME = gtk2-unicode-3.0
 EXTRALIBS = -pthread   -L/usr/X11R7/lib  -Wl,--version-script,$(wx_top_builddir)/version-script -lz -ldl -lm 
 EXTRALIBS_XML =  -lexpat
 EXTRALIBS_HTML = 
 EXTRALIBS_MEDIA = -pthread -lgstreamer-0.10 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lxml2 -lglib-2.0   -lgstinterfaces-0.10
-EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
+EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lglib-2.0 -lnotify -lgtk-x11-2.0 -ldbus-glib-1 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -ldbus-1 -lgobject-2.0 -lglib-2.0 -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
 EXTRALIBS_SDL = 
 CXXWARNINGS = -Wall -Wundef -Wunused-parameter -Wno-ctor-dtor-privacy -Woverloaded-virtual
 HOST_SUFFIX = 
 SAMPLES_RPATH_FLAG = -Wl,-rpath,$(wx_top_builddir)/lib
-wx_top_builddir = /usr/src/wxWidgets/wxWidgets
+wx_top_builddir = /usr/src/wxWidgets
 
 ### Variables: ###
 
 DESTDIR = 
-WX_RELEASE = 2.9
-WX_VERSION = $(WX_RELEASE).4
+WX_RELEASE = 3.0
+WX_VERSION = $(WX_RELEASE).0
 LIBDIRNAME = $(wx_top_builddir)/lib
 TEST_CXXFLAGS = $(__test_PCH_INC) -D__WX$(TOOLKIT)__ $(__WXUNIV_DEFINE_p) \
 	$(__DEBUG_DEFINE_p) $(__EXCEPTIONS_DEFINE_p) $(__RTTI_DEFINE_p) \
@@ -65,6 +65,7 @@ TEST_OBJECTS =  \
 	test_regconf.o \
 	test_datetimetest.o \
 	test_evthandler.o \
+	test_evtlooptest.o \
 	test_evtsource.o \
 	test_stopwatch.o \
 	test_timertest.o \
@@ -191,6 +192,8 @@ TEST_GUI_OBJECTS =  \
 	test_gui_radiobuttontest.o \
 	test_gui_rearrangelisttest.o \
 	test_gui_richtextctrltest.o \
+	test_gui_searchctrltest.o \
+	test_gui_simplebooktest.o \
 	test_gui_slidertest.o \
 	test_gui_spinctrldbltest.o \
 	test_gui_spinctrltest.o \
@@ -204,9 +207,12 @@ TEST_GUI_OBJECTS =  \
 	test_gui_virtlistctrltest.o \
 	test_gui_webtest.o \
 	test_gui_windowtest.o \
+	test_gui_dialogtest.o \
 	test_gui_clone.o \
+	test_gui_evtlooptest.o \
 	test_gui_propagation.o \
 	test_gui_keyboard.o \
+	test_gui_exec.o \
 	test_gui_fonttest.o \
 	test_gui_image.o \
 	test_gui_rawbmp.o \
@@ -308,6 +314,9 @@ __WXLIB_HTML_p = $(COND_MONOLITHIC_0___WXLIB_HTML_p)
 COND_MONOLITHIC_0___WXLIB_CORE_p = \
 	-lwx_$(PORTNAME)$(WXUNIVNAME)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)_core-$(WX_RELEASE)$(HOST_SUFFIX)
 __WXLIB_CORE_p = $(COND_MONOLITHIC_0___WXLIB_CORE_p)
+#__LIB_SCINTILLA_IF_MONO_p \
+#	= \
+#	-lwxscintilla$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
 #__LIB_TIFF_p \
 #	= \
 #	-lwxtiff$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
@@ -372,7 +381,7 @@ test$(EXEEXT): $(TEST_OBJECTS)
 	$(BK_MAKE_PCH) ./.pch/testprec_test/testprec.h.gch testprec.h $(CXX) $(TEST_CXXFLAGS)
 
 test_gui$(EXEEXT): $(TEST_GUI_OBJECTS) $(__test_gui___win32rc)
-	$(CXX) -o $@ $(TEST_GUI_OBJECTS)    -L$(LIBDIRNAME) $(SAMPLES_RPATH_FLAG) $(CPPUNIT_LIBS)  $(LDFLAGS)  $(__WXLIB_WEBVIEW_p) $(__WXLIB_RICHTEXT_p)  $(__WXLIB_MEDIA_p) $(EXTRALIBS_MEDIA) $(__WXLIB_XRC_p)  $(__WXLIB_XML_p) $(EXTRALIBS_XML) $(__WXLIB_ADV_p) $(PLUGIN_ADV_EXTRALIBS) $(__WXLIB_HTML_p) $(EXTRALIBS_HTML) $(__WXLIB_CORE_p)  $(__WXLIB_NET_p)  $(__WXLIB_BASE_p)  $(__WXLIB_MONO_p) $(__LIB_TIFF_p) $(__LIB_JPEG_p) $(__LIB_PNG_p) $(EXTRALIBS_FOR_GUI) $(__LIB_ZLIB_p) $(__LIB_REGEX_p) $(__LIB_EXPAT_p) $(EXTRALIBS_FOR_BASE) $(LIBS)
+	$(CXX) -o $@ $(TEST_GUI_OBJECTS)    -L$(LIBDIRNAME) $(SAMPLES_RPATH_FLAG) $(CPPUNIT_LIBS)  $(LDFLAGS)  $(__WXLIB_WEBVIEW_p) $(__WXLIB_RICHTEXT_p)  $(__WXLIB_MEDIA_p) $(EXTRALIBS_MEDIA) $(__WXLIB_XRC_p)  $(__WXLIB_XML_p) $(EXTRALIBS_XML) $(__WXLIB_ADV_p) $(PLUGIN_ADV_EXTRALIBS) $(__WXLIB_HTML_p) $(EXTRALIBS_HTML) $(__WXLIB_CORE_p)  $(__WXLIB_NET_p)  $(__WXLIB_BASE_p)  $(__WXLIB_MONO_p) $(__LIB_SCINTILLA_IF_MONO_p) $(__LIB_TIFF_p) $(__LIB_JPEG_p) $(__LIB_PNG_p)  $(EXTRALIBS_FOR_GUI) $(__LIB_ZLIB_p) $(__LIB_REGEX_p) $(__LIB_EXPAT_p) $(EXTRALIBS_FOR_BASE) $(LIBS)
 	
 	$(__test_gui___mac_setfilecmd)
 
@@ -415,7 +424,7 @@ data:
 
 data-images: 
 	@mkdir -p image
-	@for f in horse_grey.bmp horse_grey_flipped.bmp horse_rle4.bmp horse_rle4_flipped.bmp horse_rle8.bmp horse_rle8_flipped.bmp; do \
+	@for f in horse_grey.bmp horse_grey_flipped.bmp horse_rle4.bmp horse_rle4_flipped.bmp horse_rle8.bmp horse_rle8_flipped.bmp horse_bicubic_50x50.png horse_bicubic_100x100.png horse_bicubic_150x150.png horse_bicubic_300x300.png horse_bilinear_50x50.png horse_bilinear_100x100.png horse_bilinear_150x150.png horse_bilinear_300x300.png horse_box_average_50x50.png horse_box_average_100x100.png horse_box_average_150x150.png horse_box_average_300x300.png; do \
 	if test ! -f image/$$f -a ! -d image/$$f ; \
 	then x=yep ; \
 	else x=`find $(srcdir)/image/$$f -newer image/$$f -print` ; \
@@ -472,6 +481,9 @@ test_datetimetest.o: $(srcdir)/datetime/datetimetest.cpp $(TEST_ODEP)
 
 test_evthandler.o: $(srcdir)/events/evthandler.cpp $(TEST_ODEP)
 	$(CXXC) -c -o $@ $(TEST_CXXFLAGS) $(srcdir)/events/evthandler.cpp
+
+test_evtlooptest.o: $(srcdir)/events/evtlooptest.cpp $(TEST_ODEP)
+	$(CXXC) -c -o $@ $(TEST_CXXFLAGS) $(srcdir)/events/evtlooptest.cpp
 
 test_evtsource.o: $(srcdir)/events/evtsource.cpp $(TEST_ODEP)
 	$(CXXC) -c -o $@ $(TEST_CXXFLAGS) $(srcdir)/events/evtsource.cpp
@@ -827,6 +839,12 @@ test_gui_rearrangelisttest.o: $(srcdir)/controls/rearrangelisttest.cpp $(TEST_GU
 test_gui_richtextctrltest.o: $(srcdir)/controls/richtextctrltest.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/richtextctrltest.cpp
 
+test_gui_searchctrltest.o: $(srcdir)/controls/searchctrltest.cpp $(TEST_GUI_ODEP)
+	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/searchctrltest.cpp
+
+test_gui_simplebooktest.o: $(srcdir)/controls/simplebooktest.cpp $(TEST_GUI_ODEP)
+	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/simplebooktest.cpp
+
 test_gui_slidertest.o: $(srcdir)/controls/slidertest.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/slidertest.cpp
 
@@ -866,14 +884,23 @@ test_gui_webtest.o: $(srcdir)/controls/webtest.cpp $(TEST_GUI_ODEP)
 test_gui_windowtest.o: $(srcdir)/controls/windowtest.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/windowtest.cpp
 
+test_gui_dialogtest.o: $(srcdir)/controls/dialogtest.cpp $(TEST_GUI_ODEP)
+	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/controls/dialogtest.cpp
+
 test_gui_clone.o: $(srcdir)/events/clone.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/events/clone.cpp
+
+test_gui_evtlooptest.o: $(srcdir)/events/evtlooptest.cpp $(TEST_GUI_ODEP)
+	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/events/evtlooptest.cpp
 
 test_gui_propagation.o: $(srcdir)/events/propagation.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/events/propagation.cpp
 
 test_gui_keyboard.o: $(srcdir)/events/keyboard.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/events/keyboard.cpp
+
+test_gui_exec.o: $(srcdir)/exec/exec.cpp $(TEST_GUI_ODEP)
+	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/exec/exec.cpp
 
 test_gui_fonttest.o: $(srcdir)/font/fonttest.cpp $(TEST_GUI_ODEP)
 	$(CXXC) -c -o $@ $(TEST_GUI_CXXFLAGS) $(srcdir)/font/fonttest.cpp

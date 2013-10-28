@@ -15,15 +15,15 @@ EXEEXT =
 SETFILE = 
 STRIP = strip
 INSTALL_PROGRAM = ${INSTALL}
-INSTALL_DIR = mkdir -p
-BK_DEPS = /usr/src/wxWidgets/wxWidgets/bk-deps
+INSTALL_DIR = $(INSTALL) -d
+BK_DEPS = /usr/src/wxWidgets/bk-deps
 srcdir = .
 top_srcdir = ../../..
 bindir = ${exec_prefix}/bin
 LIBS = -lz -ldl -lm
 CXX = g++
-CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
-CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-2.9 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
+CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
+CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-3.0 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
 LDFLAGS = -pthread   -L/usr/X11R7/lib  
 WX_LIB_FLAVOUR = 
 TOOLKIT = GTK
@@ -31,15 +31,15 @@ TOOLKIT_LOWERCASE = gtk
 TOOLKIT_VERSION = 2
 EXTRALIBS = -pthread   -L/usr/X11R7/lib  -Wl,--version-script,$(wx_top_builddir)/version-script -lz -ldl -lm 
 EXTRALIBS_XML =  -lexpat
-EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
+EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lglib-2.0 -lnotify -lgtk-x11-2.0 -ldbus-glib-1 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -ldbus-1 -lgobject-2.0 -lglib-2.0 -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
 CXXWARNINGS = -Wall -Wundef -Wunused-parameter -Wno-ctor-dtor-privacy -Woverloaded-virtual
 HOST_SUFFIX = 
-wx_top_builddir = /usr/src/wxWidgets/wxWidgets
+wx_top_builddir = /usr/src/wxWidgets
 
 ### Variables: ###
 
 DESTDIR = 
-WX_RELEASE = 2.9
+WX_RELEASE = 3.0
 LIBDIRNAME = $(wx_top_builddir)/lib
 IFACECHECK_CXXFLAGS = -D__WX$(TOOLKIT)__ $(__WXUNIV_DEFINE_p) \
 	$(__DEBUG_DEFINE_p) $(__EXCEPTIONS_DEFINE_p) $(__RTTI_DEFINE_p) \

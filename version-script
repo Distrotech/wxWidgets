@@ -1,6 +1,4 @@
 #
-# $Id$
-#
 # Notes:
 #
 # Remove all of the tags below except for the last one when creating new
@@ -12,8 +10,8 @@
 # With each new release a section should be added containing any new symbols,
 # for example:
 #
-#   # public symbols added in release WXU_2.9.2 (please keep in alphabetical order):
-#   WXU_2.9.2 {
+#   # public symbols added in release WXU_3.0.2 (please keep in alphabetical order):
+#   WXU_3.0.2 {
 #           *wxChoice*GetCurrentSelection*;
 #   };
 #
@@ -26,6 +24,6 @@
 # symbols available since the beginning of this branch are only given
 # generic branch tag (don't remove this!):
 
-WXU_2.9 {
+WXU_3.0 {
         *;
 };

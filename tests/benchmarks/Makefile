@@ -12,31 +12,34 @@ exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 INSTALL = /usr/bin/ginstall -c
 EXEEXT = 
+WINDRES = 
 SETFILE = 
-BK_DEPS = /usr/src/wxWidgets/wxWidgets/bk-deps
+BK_DEPS = /usr/src/wxWidgets/bk-deps
 srcdir = .
 top_srcdir = ../..
 LIBS = -lz -ldl -lm
 CXX = g++
-CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
-CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-2.9 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
+CXXFLAGS = -DWX_PRECOMP -pthread -O2 -fno-strict-aliasing -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-unix-print-2.0 -I/usr/include/gtk-2.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/lib/gtk-2.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -fvisibility=hidden -fvisibility-inlines-hidden
+CPPFLAGS = -D_FILE_OFFSET_BITS=64 -I${wx_top_builddir}/lib/wx/include/gtk2-unicode-3.0 -I${top_srcdir}/include -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -pthread -I/usr/X11R7/include/pixman-1 -I/usr/X11R7/include -I/usr/include/webkitgtk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gtk-2.0 -I/usr/include/libsoup-2.4 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/libpng15 -I/usr/include/libxml2
 LDFLAGS = -pthread   -L/usr/X11R7/lib  
 WX_LIB_FLAVOUR = 
 TOOLKIT = GTK
 TOOLKIT_LOWERCASE = gtk
 TOOLKIT_VERSION = 2
+TOOLCHAIN_FULLNAME = gtk2-unicode-3.0
 EXTRALIBS = -pthread   -L/usr/X11R7/lib  -Wl,--version-script,$(wx_top_builddir)/version-script -lz -ldl -lm 
 EXTRALIBS_XML =  -lexpat
-EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
+EXTRALIBS_GUI = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lX11 -lSM -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgobject-2.0 -lglib-2.0 -lnotify -lgtk-x11-2.0 -ldbus-glib-1 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -ldbus-1 -lgobject-2.0 -lglib-2.0 -lwebkitgtk-1.0 -lgtk-x11-2.0 -lsoup-2.4 -ljavascriptcoregtk-1.0 -lgdk-x11-2.0 -latk-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpangoft2-1.0 -lpango-1.0 -lm -lfreetype -lfontconfig -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lpng -lz -ljpeg -ltiff
 CXXWARNINGS = -Wall -Wundef -Wunused-parameter -Wno-ctor-dtor-privacy -Woverloaded-virtual
 HOST_SUFFIX = 
 SAMPLES_RPATH_FLAG = -Wl,-rpath,$(wx_top_builddir)/lib
-wx_top_builddir = /usr/src/wxWidgets/wxWidgets
+wx_top_builddir = /usr/src/wxWidgets
 
 ### Variables: ###
 
 DESTDIR = 
-WX_RELEASE = 2.9
+WX_RELEASE = 3.0
+WX_VERSION = $(WX_RELEASE).0
 LIBDIRNAME = $(wx_top_builddir)/lib
 BENCH_CXXFLAGS = -D__WX$(TOOLKIT)__ $(__WXUNIV_DEFINE_p) $(__DEBUG_DEFINE_p) \
 	$(__EXCEPTIONS_DEFINE_p) $(__RTTI_DEFINE_p) $(__THREAD_DEFINE_p) \
@@ -53,6 +56,15 @@ BENCH_OBJECTS =  \
 	bench_strings.o \
 	bench_tls.o \
 	bench_printfbench.o
+BENCH_GUI_CXXFLAGS = -D__WX$(TOOLKIT)__ $(__WXUNIV_DEFINE_p) \
+	$(__DEBUG_DEFINE_p) $(__EXCEPTIONS_DEFINE_p) $(__RTTI_DEFINE_p) \
+	$(__THREAD_DEFINE_p) -I$(srcdir) $(__DLLFLAG_p) -I$(srcdir)/../../samples \
+	$(CXXWARNINGS) $(CPPFLAGS) $(CXXFLAGS)
+BENCH_GUI_OBJECTS =  \
+	$(__bench_gui___win32rc) \
+	$(__bench_gui_os2_lib_res) \
+	bench_gui_bench.o \
+	bench_gui_image.o
 
 ### Conditionally set variables: ###
 
@@ -67,25 +79,68 @@ WXUNICODEFLAG = u
 EXTRALIBS_FOR_BASE = $(EXTRALIBS)
 #EXTRALIBS_FOR_BASE = $(EXTRALIBS) \
 #	$(EXTRALIBS_XML) $(EXTRALIBS_GUI)
+EXTRALIBS_FOR_GUI = $(EXTRALIBS_GUI)
+#EXTRALIBS_FOR_GUI = 
 __bench___mac_setfilecmd = @true
 #__bench___mac_setfilecmd = \
 #	$(SETFILE) -t APPL bench$(EXEEXT)
+COND_MONOLITHIC_0___WXLIB_NET_p = \
+	-lwx_base$(WXBASEPORT)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)_net-$(WX_RELEASE)$(HOST_SUFFIX)
+__WXLIB_NET_p = $(COND_MONOLITHIC_0___WXLIB_NET_p)
+#__LIB_PNG_IF_MONO_p = $(__LIB_PNG_p)
+__bench_gui___depname = bench_gui$(EXEEXT)
+__bench_gui___mac_setfilecmd = @true
+#__bench_gui___mac_setfilecmd = \
+#	$(SETFILE) -t APPL bench_gui$(EXEEXT)
+#__WXUNIV_DEFINE_p_5 = --define __WXUNIVERSAL__
+#__DEBUG_DEFINE_p_5 = --define wxDEBUG_LEVEL=0
+#__EXCEPTIONS_DEFINE_p_5 = --define wxNO_EXCEPTIONS
+#__RTTI_DEFINE_p_5 = --define wxNO_RTTI
+#__THREAD_DEFINE_p_5 = --define wxNO_THREADS
+__DLLFLAG_p_5 = --define WXUSINGDLL
+#__RCDEFDIR_p_1 = --include-dir \
+#	$(LIBDIRNAME)/wx/include/$(TOOLCHAIN_FULLNAME)
+#__bench_gui___win32rc = bench_gui_sample_rc.o
+#__bench_gui_os2_lib_res = \
+#	$(top_srcdir)/include/wx/os2/wx.res
+#__bench_gui_app_Contents_PkgInfo___depname \
+#	= bench_gui.app/Contents/PkgInfo
+#__bench_gui_bundle___depname \
+#	= bench_gui_bundle
+#____bench_gui_BUNDLE_TGT_REF_DEP = \
+#	$(__bench_gui_app_Contents_PkgInfo___depname)
+#____bench_gui_BUNDLE_TGT_REF_DEP \
+#	= $(__bench_gui_app_Contents_PkgInfo___depname)
+#____bench_gui_BUNDLE_TGT_REF_DEP \
+#	= $(__bench_gui_app_Contents_PkgInfo___depname)
+#____bench_gui_BUNDLE_TGT_REF_DEP \
+#	= $(__bench_gui_app_Contents_PkgInfo___depname)
+#____bench_gui_BUNDLE_TGT_REF_DEP = \
+#	$(__bench_gui_app_Contents_PkgInfo___depname)
+COND_MONOLITHIC_0___WXLIB_CORE_p = \
+	-lwx_$(PORTNAME)$(WXUNIVNAME)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)_core-$(WX_RELEASE)$(HOST_SUFFIX)
+__WXLIB_CORE_p = $(COND_MONOLITHIC_0___WXLIB_CORE_p)
+#__LIB_SCINTILLA_IF_MONO_p \
+#	= \
+#	-lwxscintilla$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
+#__LIB_TIFF_p \
+#	= \
+#	-lwxtiff$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
+#__LIB_JPEG_p \
+#	= \
+#	-lwxjpeg$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
 #__WXUNIV_DEFINE_p = -D__WXUNIVERSAL__
 #__DEBUG_DEFINE_p = -DwxDEBUG_LEVEL=0
 #__EXCEPTIONS_DEFINE_p = -DwxNO_EXCEPTIONS
 #__RTTI_DEFINE_p = -DwxNO_RTTI
 #__THREAD_DEFINE_p = -DwxNO_THREADS
 __DLLFLAG_p = -DWXUSINGDLL
-COND_MONOLITHIC_0___WXLIB_NET_p = \
-	-lwx_base$(WXBASEPORT)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)_net-$(WX_RELEASE)$(HOST_SUFFIX)
-__WXLIB_NET_p = $(COND_MONOLITHIC_0___WXLIB_NET_p)
 COND_MONOLITHIC_0___WXLIB_BASE_p = \
 	-lwx_base$(WXBASEPORT)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
 __WXLIB_BASE_p = $(COND_MONOLITHIC_0___WXLIB_BASE_p)
 COND_MONOLITHIC_1___WXLIB_MONO_p = \
 	-lwx_$(PORTNAME)$(WXUNIVNAME)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
 #__WXLIB_MONO_p = $(COND_MONOLITHIC_1___WXLIB_MONO_p)
-#__LIB_PNG_IF_MONO_p = $(__LIB_PNG_p)
 #__LIB_PNG_p \
 #	= \
 #	-lwxpng$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
@@ -99,7 +154,7 @@ __LIB_REGEX_p = $(COND_wxUSE_REGEX_builtin___LIB_REGEX_p)
 
 ### Targets: ###
 
-all: bench$(EXEEXT) data
+all: bench$(EXEEXT) data $(__bench_gui___depname) $(__bench_gui_bundle___depname) data-image
 
 install: 
 
@@ -111,6 +166,8 @@ clean:
 	rm -rf ./.deps ./.pch
 	rm -f ./*.o
 	rm -f bench$(EXEEXT)
+	rm -f bench_gui$(EXEEXT)
+	rm -rf bench_gui.app
 
 distclean: clean
 	rm -f config.cache config.log config.status bk-deps bk-make-pch shared-ld-sh Makefile
@@ -123,6 +180,45 @@ bench$(EXEEXT): $(BENCH_OBJECTS)
 data: 
 	@mkdir -p .
 	@for f in htmltest.html; do \
+	if test ! -f ./$$f -a ! -d ./$$f ; \
+	then x=yep ; \
+	else x=`find $(srcdir)/$$f -newer ./$$f -print` ; \
+	fi; \
+	case "$$x" in ?*) \
+	cp -pRf $(srcdir)/$$f . ;; \
+	esac; \
+	done
+
+bench_gui$(EXEEXT): $(BENCH_GUI_OBJECTS) $(__bench_gui___win32rc)
+	$(CXX) -o $@ $(BENCH_GUI_OBJECTS)    -L$(LIBDIRNAME) $(SAMPLES_RPATH_FLAG)  $(LDFLAGS)  $(__WXLIB_CORE_p)  $(__WXLIB_BASE_p)  $(__WXLIB_MONO_p) $(__LIB_SCINTILLA_IF_MONO_p) $(__LIB_TIFF_p) $(__LIB_JPEG_p) $(__LIB_PNG_p)  $(EXTRALIBS_FOR_GUI) $(__LIB_ZLIB_p) $(__LIB_REGEX_p) $(__LIB_EXPAT_p) $(EXTRALIBS_FOR_BASE) $(LIBS)
+	
+	$(__bench_gui___mac_setfilecmd)
+
+#bench_gui.app/Contents/PkgInfo: $(__bench_gui___depname) $(top_srcdir)/src/osx/carbon/Info.plist.in $(top_srcdir)/src/osx/carbon/wxmac.icns
+#	mkdir -p bench_gui.app/Contents
+#	mkdir -p bench_gui.app/Contents/MacOS
+#	mkdir -p bench_gui.app/Contents/Resources
+#	
+#	
+#	sed -e "s/IDENTIFIER/`echo $(srcdir) | sed -e 's,\.\./,,g' | sed -e 's,/,.,g'`/" \
+#	-e "s/EXECUTABLE/bench_gui/" \
+#	-e "s/VERSION/$(WX_VERSION)/" \
+#	$(top_srcdir)/src/osx/carbon/Info.plist.in >bench_gui.app/Contents/Info.plist
+#	
+#	
+#	/bin/echo "APPL????" >bench_gui.app/Contents/PkgInfo
+#	
+#	
+#	ln -f bench_gui$(EXEEXT) bench_gui.app/Contents/MacOS/bench_gui
+#	
+#	
+#	cp -f $(top_srcdir)/src/osx/carbon/wxmac.icns bench_gui.app/Contents/Resources/wxmac.icns
+
+#bench_gui_bundle: $(____bench_gui_BUNDLE_TGT_REF_DEP)
+
+data-image: 
+	@mkdir -p .
+	@for f in ../../samples/image/horse.bmp ../../samples/image/horse.jpg ../../samples/image/horse.png ../../samples/image/horse.tif; do \
 	if test ! -f ./$$f -a ! -d ./$$f ; \
 	then x=yep ; \
 	else x=`find $(srcdir)/$$f -newer ./$$f -print` ; \
@@ -162,8 +258,17 @@ bench_tls.o: $(srcdir)/tls.cpp
 bench_printfbench.o: $(srcdir)/printfbench.cpp
 	$(CXXC) -c -o $@ $(BENCH_CXXFLAGS) $(srcdir)/printfbench.cpp
 
+bench_gui_sample_rc.o: $(srcdir)/../../samples/sample.rc
+	$(WINDRES) -i$< -o$@    --define __WX$(TOOLKIT)__ $(__WXUNIV_DEFINE_p_5) $(__DEBUG_DEFINE_p_5)  $(__EXCEPTIONS_DEFINE_p_5) $(__RTTI_DEFINE_p_5) $(__THREAD_DEFINE_p_5)   --include-dir $(srcdir) $(__DLLFLAG_p_5) --include-dir $(srcdir)/../../samples $(__RCDEFDIR_p_1) --include-dir $(top_srcdir)/include
+
+bench_gui_bench.o: $(srcdir)/bench.cpp
+	$(CXXC) -c -o $@ $(BENCH_GUI_CXXFLAGS) $(srcdir)/bench.cpp
+
+bench_gui_image.o: $(srcdir)/image.cpp
+	$(CXXC) -c -o $@ $(BENCH_GUI_CXXFLAGS) $(srcdir)/image.cpp
+
 
 # Include dependency info, if present:
 -include ./.deps/*.d
 
-.PHONY: all install uninstall clean distclean data
+.PHONY: all install uninstall clean distclean data bench_gui_bundle data-image
