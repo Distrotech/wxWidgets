@@ -21,6 +21,7 @@
 
 #if GST_CHECK_VERSION(1,0,0)
 #include <gst/video/video.h>
+#include <gst/video/videooverlay.h>
 #else
 #include <gst/interfaces/xoverlay.h>
 #endif
